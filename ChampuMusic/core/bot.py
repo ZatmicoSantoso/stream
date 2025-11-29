@@ -1,11 +1,3 @@
-import uvloop
-import asyncio
-import sys
-
-asyncio.get_event_loop_policy().get_event_loop().run_until_complete(init())
-LOGGER("ChampuMusic").info("sᴛᴏᴘᴘɪɴɢ ᴄʜᴀᴍᴘᴜᴍᴜsɪᴄ! ɢᴏᴏᴅʙʏᴇ")
-
-
 import pyrogram
 from pyrogram import Client
 from pyrogram.enums import ChatMemberStatus
