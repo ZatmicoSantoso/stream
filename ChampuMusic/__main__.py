@@ -1,16 +1,18 @@
 import uvloop
 import asyncio
+from ChampuMusic.core.call import Call
+from pyrogram import idle
 
 asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 
 async def init():
-    await app.start()
-    LOGGER("ChampuMusic").info("sᴛᴀʀᴛᴇᴅ ᴄʜᴀᴍᴘᴜᴍᴜsɪᴄ")
+    champu = Call()
+    await champu.start_userbot()  # start userbot di dalam loop
+    print("Userbot started!")
     await idle()
-    await app.stop()
-    LOGGER("ChampuMusic").info("sᴛᴏᴘᴘɪɴɢ ᴄʜᴀᴍᴘᴜᴍᴜsɪᴄ! ɢᴏᴏᴅʙʏᴇ")
-
-
+    await champu.userbot1.stop()
+    print("Userbot stopped!")
+    
 import importlib
 
 from pyrogram import idle
