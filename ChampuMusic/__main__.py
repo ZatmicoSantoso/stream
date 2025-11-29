@@ -55,12 +55,5 @@ async def init():
 
 
 if __name__ == "__main__":
-    import uvloop
-    asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
-
-    try:
-        asyncio.run(init())
-    except KeyboardInterrupt:
-        pass
-
+    asyncio.get_event_loop_policy().get_event_loop().run_until_complete(init())
     LOGGER("ChampuMusic").info("sᴛᴏᴘᴘɪɴɢ ᴄʜᴀᴍᴘᴜᴍᴜsɪᴄ! ɢᴏᴏᴅʙʏᴇ")
