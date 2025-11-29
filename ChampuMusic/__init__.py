@@ -1,9 +1,10 @@
+import uvloop
 import asyncio
 import sys
 
-if "uvloop" in sys.modules:
-    import uvloop
-    asyncio.set_event_loop_policy(asyncio.DefaultEventLoopPolicy())
+asyncio.get_event_loop_policy().get_event_loop().run_until_complete(init())
+LOGGER("ChampuMusic").info("sᴛᴏᴘᴘɪɴɢ ᴄʜᴀᴍᴘᴜᴍᴜsɪᴄ! ɢᴏᴏᴅʙʏᴇ")
+
 
 from ChampuMusic.core.bot import ChampuBot
 from ChampuMusic.core.dir import dirr
