@@ -1,3 +1,10 @@
+import asyncio
+import sys
+
+if "uvloop" in sys.modules:
+    import uvloop
+    asyncio.set_event_loop_policy(asyncio.DefaultEventLoopPolicy())
+
 import pyrogram
 from pyrogram import Client
 from pyrogram.enums import ChatMemberStatus
