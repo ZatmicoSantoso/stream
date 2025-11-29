@@ -1,15 +1,4 @@
-import uvloop
 import asyncio
-
-asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
-
-async def init():
-    await app.start()
-    LOGGER("ChampuMusic").info("sᴛᴀʀᴛᴇᴅ ᴄʜᴀᴍᴘᴜᴍᴜsɪᴄ")
-    await idle()
-    await app.stop()
-    LOGGER("ChampuMusic").info("sᴛᴏᴘᴘɪɴɢ ᴄʜᴀᴍᴘᴜᴍᴜsɪᴄ! ɢᴏᴏᴅʙʏᴇ")
-
 from ChampuMusic.core.bot import ChampuBot
 from ChampuMusic.core.dir import dirr
 from ChampuMusic.core.git import git
