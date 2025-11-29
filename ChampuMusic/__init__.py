@@ -1,3 +1,10 @@
+import asyncio
+import sys
+
+if "uvloop" in sys.modules:
+    import uvloop
+    asyncio.set_event_loop_policy(asyncio.DefaultEventLoopPolicy())
+
 from ChampuMusic.core.bot import ChampuBot
 from ChampuMusic.core.dir import dirr
 from ChampuMusic.core.git import git
